@@ -9,3 +9,5 @@ GROUP BY
     CAR_TYPE
 ORDER BY
     CAR_TYPE;
+
+## REGEXP : WHERE 절에서 특정 문자열이 패턴과 일치하는지 확인.
