@@ -9,3 +9,5 @@ GROUP BY
     HOUR
 ORDER BY
     HOUR;
+
+## SELECT 절에서 만든 별칭은 ORDER BY 절에서는 사용 가능, GROUP BY 절에서는 DBMS마다 다름. GROUP BY에서는 가능한 원본 사용하기.
