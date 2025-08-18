@@ -10,4 +10,5 @@ ORDER BY
     SALES DESC,
     P.PRODUCT_CODE;
 
-## JOIN 시 사용했던 별칭은 충돌이 없는 컬럼이라면 사용할 필요 없음. (PRODUCT_CODE, PRICE는 PRODUCT 테이블에만, SALES_AMOUNT는 OFFLINE_SALE 테이블에만 있기 때문에 별칭 사용 안해도 가능.)
+## JOIN 시 사용했던 별칭은 충돌이 없는 컬럼이라면 사용할 필요 없음.
+    (PRODUCT_CODE, PRICE는 PRODUCT 테이블에만, SALES_AMOUNT는 OFFLINE_SALE 테이블에만 있기 때문에 별칭 사용 안해도 가능.)
