@@ -5,8 +5,9 @@ SELECT
 FROM
     ANIMAL_INS
 WHERE
-    NAME REGEXP('^(Lucy|Ella|Pickle|Rogan|Sabrina|Mitty)$');
-    
+    NAME REGEXP('^(Lucy|Ella|Pickle|Rogan|Sabrina|Mitty)$')
+ORDER BY
+    ANIMAL_ID;
 # '^Lucy$' : Lucy와 매칭되는 단어
 # '^Lu' : Lu로 시작되는 문자열 매칭
 # 'cy$' : cy로 끝나는 문자열 매칭
