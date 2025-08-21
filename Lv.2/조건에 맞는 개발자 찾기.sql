@@ -1,0 +1,28 @@
+SELECT
+    ID,
+    EMAIL,
+    FIRST_NAME,
+    LAST_NAME
+FROM
+    DEVELOPERS
+WHERE
+    SKILL_CODE & (SELECT CODE FROM SKILLCODES WHERE NAME = 'Python') > 0
+    OR SKILL_CODE & (SELECT CODE FROM SKILLCODES WHERE NAME = 'C#') > 0
+ORDER BY
+    ID;
+
+# SELECT
+#     ID,
+#     EMAIL,
+#     FIRST_NAME,
+#     LAST_NAME
+# FROM
+#     SKILLCODES AS S
+#     JOIN DEVELOPERS AS D
+#     ON (S.CODE & D.SKILL_CODE) > 0
+# WHERE
+#     NAME IN ('Python', 'C#')
+# ORDER BY
+#     ID;
+
+# 얘는 왜 안될까요?
