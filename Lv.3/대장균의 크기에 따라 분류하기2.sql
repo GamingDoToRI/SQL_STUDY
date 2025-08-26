@@ -1,0 +1,19 @@
+SELECT
+    ID,
+    CASE NTILE(4) OVER (ORDER BY SIZE_OF_COLONY DESC)
+        WHEN 1 THEN 'CRITICAL'
+        WHEN 2 THEN 'HIGH'
+        WHEN 3 THEN 'MEDIUM'
+        WHEN 4 THEN 'LOW'
+    END AS COLONY_NAME
+FROM
+    ECOLI_DATA
+ORDER BY
+    1;
+
+# NTILE(4) = 4등분
+# OVER (ORDER BY SIZE_OF_COLONY DESC) = SIZE_0F_COLONY 내림차순 기준
+# 1 : 0 ~ 25%
+# 2 : 26 ~ 50%
+# 3 : 51 ~ 75%
+# 4 : 76 ~ 100%
